@@ -1,0 +1,4 @@
+
+A minimal static site generator for doing my portfolio.  Creates html files
+that are output to the dist folder (or the folder given as the first
+argument to the script)

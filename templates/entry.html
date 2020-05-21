@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ title if title else "" }}</h2>
+{{ date if date else "" }}
+{{ author if date else "" }}
+{{ content }}
+{% endblock %}
