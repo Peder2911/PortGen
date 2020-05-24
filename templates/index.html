@@ -1,3 +1,10 @@
 {% extends "base.html" %}
+{% block title %}
+Peder Landsverk
+{% endblock %}
+
 {% block content %}
+   {% for i in entries %}
+      <a href="{{i.link}}">{{i.name}}</a>
+   {% endfor %}
 {% endblock %}

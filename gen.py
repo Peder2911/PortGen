@@ -12,6 +12,8 @@ green = lambda x: color(x,"32")
 blue = lambda x: color(x,"35")
 purple = lambda x: color(x,"34")
 
+Entry = namedtuple("Entry",("name","link"))
+
 def markdownWithHeader(rawMd):
     lines = rawMd.split("\n")
     lines.reverse()
@@ -53,7 +55,7 @@ def generate(to: str = "dist") -> None:
     for path in withExt(fullPaths("src"),".md"):
         name = fname(path)
         print("\t" + blue(name))
-        entries.append(name)
+        entries.append(Entry(name=name.replace("_"," "),link=f"./{name}.html"))
 
         with open(path) as f:
             md,header = markdownWithHeader(f.read())
